@@ -9,8 +9,11 @@ import { Project } from './entities/project.entity';
   imports: [TypeOrmModule.forFeature([Project])],
 
   providers: [
+
     ProjectResolver,
+
     ProjectService
+
   ],
 
   exports: [ProjectService]

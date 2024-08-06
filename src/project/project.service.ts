@@ -20,22 +20,13 @@ export class ProjectService {
 
   getAllProject(): Promise<Project[]> {
 
-    return this.pojectRepository.find({
-
-      relations: ['employees']
-
-    })
+    return this.pojectRepository.find({ relations: ['employees'] })
 
   }
 
   async getProject(id: string): Promise<Project> {
 
-    const project = await this.pojectRepository.findOne({
-
-      where: { id: id },
-      relations: ['employees']
-
-    })
+    const project = await this.pojectRepository.findOne({ where: { id: id }, relations: ['employees'] })
 
     return project
 

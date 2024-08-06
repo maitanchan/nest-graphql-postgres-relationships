@@ -13,12 +13,12 @@ import { ProjectModule } from './project/project.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
 
       driver: ApolloDriver,
+
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
 
     }),
 
     TypeOrmModule.forRoot({
-
       type: 'postgres',
       host: 'localhost',
       port: 5432,
@@ -27,7 +27,6 @@ import { ProjectModule } from './project/project.module';
       password: '20d191080',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
-
     }),
 
     EmployeeModule,

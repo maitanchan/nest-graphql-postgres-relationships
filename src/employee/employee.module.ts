@@ -8,13 +8,19 @@ import { ProjectModule } from '../project/project.module';
 @Module({
 
   imports: [
+
     TypeOrmModule.forFeature([Employee]),
+
     ProjectModule
+
   ],
 
   providers: [
+
     EmployeeResolver,
+
     EmployeeService
+
   ]
 
 })
